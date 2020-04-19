@@ -1,0 +1,6 @@
+rootProject.name = "movie-fun-modernization"
+
+include "applications:movie-fun-app"
+include "components:albums"
+include "components:movies"
+include "components:blobstore"

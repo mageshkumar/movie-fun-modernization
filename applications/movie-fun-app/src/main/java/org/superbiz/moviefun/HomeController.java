@@ -42,7 +42,7 @@ public class HomeController {
         }
 
         model.put("movies", moviesBean.getMovies());
-        model.put("albums", albumsBean.getAlbums());
+        model.put("org/superbiz/moviefun/albums", albumsBean.getAlbums());
 
         return "setup";
     }

@@ -17,6 +17,7 @@ flyway {
     url = "jdbc:mysql://localhost:3306/movies?useSSL=false"
     user = "root"
     outOfOrder = false
+    baselineOnMigrate = true
 }
 
 def tunnelProcess
@@ -28,7 +29,7 @@ task openTunnel {
             tunnelProcess = "cf ssh -N -L 63306:${getMysqlHost("movie-database")}:3306 movie-service".execute()
         }
 
-        sleep 5_000L
+        sleep 30_000L
 
         if (tunnelProcess == null) throw new Exception("Unable to open tunnel!")
     }
